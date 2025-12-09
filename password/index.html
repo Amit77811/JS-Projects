@@ -19,6 +19,7 @@
 
     <script>
         let passwordBox = document.getElementById("password");
+        let copy = document.querySelector(".display img");
         const length = 7;
 
         const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -40,9 +41,10 @@
             passwordBox.value = password;
         }
 
-        
-
-
+        copy.addEventListener("click", function(){
+            navigator.clipboard.writeText(passwordBox.value);  
+            alert("password copied");
+        });
 
 
 
